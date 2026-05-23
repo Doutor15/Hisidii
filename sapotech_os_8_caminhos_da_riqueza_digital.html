@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPOTECH | Os 8 Caminhos da Riqueza Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        .chart-container-large {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 450px;
+            max-height: 500px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .glass-card {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+        }
+        .glass-card:hover {
+            border-color: rgba(34, 197, 94, 0.5);
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+        }
+        .text-neon {
+            color: #22c55e;
+            text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+        .bg-neon-glow {
+            background: radial-gradient(circle at center, rgba(34, 197, 94, 0.15) 0%, rgba(0,0,0,0) 70%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb { background: #22c55e; border-radius: 4px; }
+    </style>
+</head>
+<body class="antialiased selection:bg-green-500 selection:text-black">
+
+    <!-- PLAN NARRATIVE: This infographic maps Pablo Marcal's '8 Paths to Wealth' to SAPOTECH's core IT services for SMEs in Angola. Section 1 covers Web Dev (Sales/Acquisitions), Section 2 covers IT Diagnostics (Wisdom/Knowledge), Section 3 covers Cloud/Collaboration (Networking), Section 4 covers Growth (Entrepreneurship), Section 5 covers ROI (Investments), Section 6 covers Data Recovery (Produce/Reproduce), Section 7 covers Brand Authority (Storytelling), and Section 8 synthesizes INFO/TECH/ACCESS. -->
+    <!-- CHART CHOICES: Path 1: Bar Chart (Compare physical vs digital sales). Path 2: Doughnut (Inform on downtime causes). Path 3: Bubble (Relationship of team size, output, cloud capacity). Path 4: Line (Change in revenue over time). Path 5: Stacked Bar (Composition of IT ROI). Path 6: Area (Volume of protected data). Path 7: Radar (Relationship of brand attributes). Path 8: Plotly 3D Scatter (Complex relationship of INFO, TECH, ACCESS). NO SVG USED. -->
+    <!-- CONFIRMATION: NEITHER Mermaid JS NOR SVG were used anywhere in the output. Palette selected: Vibrant Neon Green & Deep Black (Professional & Stylish). -->
+
+    <header class="fixed top-0 w-full z-50 glass-card rounded-none border-t-0 border-l-0 border-r-0 border-b border-green-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-black border border-green-500 rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.3)] text-3xl">🐸</div>
+                <div>
+                    <h1 class="text-2xl font-black tracking-widest text-white">SAPO<span class="text-green-500">TECH</span></h1>
+                    <p class="text-[9px] text-green-400 tracking-widest uppercase font-bold">Inteligência de Dados</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6 text-xs font-bold text-neutral-400 tracking-wider">
+                <a href="#dashboard" class="hover:text-green-400 transition-colors">O INFINITO DIGITAL</a>
+                <a href="#action" class="px-4 py-2 bg-green-500 text-black rounded-lg hover:bg-green-400 transition-colors shadow-[0_0_10px_rgba(34,197,94,0.3)]">INICIAR JORNADA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="dashboard" class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+        <div class="absolute inset-0 bg-neon-glow -z-10 pointer-events-none"></div>
+
+        <section class="text-center max-w-3xl mx-auto mb-16 space-y-6">
+            <div class="inline-block px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-xs font-bold uppercase tracking-widest">Relatório Executivo PME</div>
+            <h2 class="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">Os 8 Caminhos da <br><span class="text-neon">Riqueza Digital</span></h2>
+            <p class="text-neutral-400 text-sm md:text-base leading-relaxed">
+                Baseado nos princípios de multiplicação e domínio de mercado, este painel interativo demonstra como as soluções da <strong>SAPOTECH</strong> transformam empresas estagnadas (o aquário) em líderes tecnológicos resilientes (o oceano). Os dados refletem projeções de impacto para PMEs angolanas.
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+            <div class="glass-card p-6 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🛒</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">1. Vendas & Expansão</h3>
+                        <p class="text-xs text-green-500 font-semibold">Criação de Websites e E-Commerce</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6 flex-grow">
+                    Compartilhar é vender. Uma PME sem montra digital limita as suas aquisições ao tráfego físico. Ao lançar uma loja online ou website profissional, a taxa de conversão multiplica-se, escapando das barreiras geográficas.
+                </p>
+                <div class="chart-container">
+                    <canvas id="chartPath1"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🧠</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">2. Conhecimento & Sabedoria</h3>
+                        <p class="text-xs text-green-500 font-semibold">Diagnóstico & Manutenção Proativa</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6 flex-grow">
+                    Conhecimento sem prática é inútil. Identificar as vulnerabilidades da infraestrutura de TI (Sabedoria) e aplicar manutenção preventiva (Instrução) elimina os custos invisíveis do tempo de inatividade.
+                </p>
+                <div class="chart-container">
+                    <canvas id="chartPath2"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col md:col-span-2 lg:col-span-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">☁️</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">3. Networking Fluido</h3>
+                        <p class="text-xs text-green-500 font-semibold">Soluções Cloud & Mobilidade</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6 flex-grow">
+                    Oitenta e cinco por cento dos resultados dependem de conexões. O armazenamento em nuvem permite colaboração em tempo real, partilha segura de ficheiros e uma rede de trabalho (networking) onde equipas e clientes se conectam instantaneamente.
+                </p>
+                <div class="chart-container">
+                    <canvas id="chartPath3"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col md:col-span-2 lg:col-span-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">📈</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">4. Empreender & Crescer</h3>
+                        <p class="text-xs text-green-500 font-semibold">Crescimento Acelerado (Digitalização)</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6 flex-grow">
+                    Empreender é solucionar problemas e fazer crescer. PMEs que integram o ecossistema tecnológico completo da SAPOTECH escalonam os seus resultados exponencialmente ao longo de 5 anos face às que mantêm modelos tradicionais.
+                </p>
+                <div class="chart-container">
+                    <canvas id="chartPath4"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col lg:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🛡️</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">5. Investimento Consciente</h3>
+                        <p class="text-xs text-green-500 font-semibold">Segurança Digital & Retorno sobre Investimento (ROI)</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6">
+                    Todo o investimento exige retorno. Investir em cibersegurança não é despesa, é o custo de proteção do capital. A proporção do valor retornado face à prevenção de ransomware e falhas demonstra um ROI tecnológico imbatível.
+                </p>
+                <div class="chart-container-large">
+                    <canvas id="chartPath5"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🔄</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">6. Produzir & Reproduzir</h3>
+                        <p class="text-xs text-green-500 font-semibold">Recuperação de Dados Extrema</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6 flex-grow">
+                    Quem reproduz consegue escalar. Se um desastre atinge os seus discos, a capacidade de recuperar, desencriptar e reproduzir os seus dados vitais garante que o histórico da sua empresa nunca seja apagado.
+                </p>
+                <div class="chart-container">
+                    <canvas id="chartPath6"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">📢</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">7. Storytelling da Marca</h3>
+                        <p class="text-xs text-green-500 font-semibold">Autoridade via Consultoria e Web Design</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6 flex-grow">
+                    A vida corporativa é um storytelling. Um website não vende apenas produtos, ele eleva a perceção de inovação e confiança. A arquitetura de marca adequada muda drasticamente a forma como o mercado interage consigo.
+                </p>
+                <div class="chart-container">
+                    <canvas id="chartPath7"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 flex flex-col md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">♾️</span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">8. Digital: Info, Tech, Access</h3>
+                        <p class="text-xs text-green-500 font-semibold">O Algoritmo da Riqueza SAPOTECH</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 mb-6">
+                    A soma de Dados estruturados (INFO), Sistemas Otimizados (TECH) e Conectividade Cloud/Web (ACCESS) cria uma explosão de rentabilidade. O gráfico tridimensional abaixo ilustra como a maximização destas três variáveis afasta a sua PME da base de risco e a eleva ao topo do mercado.
+                </p>
+                <div class="chart-container-large bg-black/50 rounded-xl border border-green-500/10 overflow-hidden" id="chartPath8">
+                    <!-- Plotly Canvas Container -->
+                </div>
+            </div>
+
+        </div>
+
+        <section id="action" class="mt-16 text-center glass-card p-10 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-green-500/20 blur-[100px] rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Pronto para Mudar a sua Realidade?</h2>
+            <p class="text-neutral-400 text-sm md:text-base max-w-2xl mx-auto mb-8">
+                Deixe o aquário. Mergulhe no oceano de oportunidades com a SAPOTECH. Os números não mentem, a tecnologia é a única via para a multiplicação infinita do seu talento.
+            </p>
+            <a href="https://wa.me/244937933614?text=Olá,%20vi%20o%20infográfico%20da%20SAPOTECH%20e%20quero%20escalar%20o%20meu%20negócio!" 
+               target="_blank"
+               class="inline-flex items-center gap-2 bg-green-500 text-black font-extrabold px-8 py-4 rounded-xl hover:bg-green-400 transition-all shadow-[0_0_20px_rgba(34,197,94,0.4)]">
+               <span class="text-xl">💬</span> Falar com Especialista
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-green-900/50 bg-black py-8 mt-12 text-center text-xs text-neutral-500">
+        <p>SAPOTECH © 2026 - Tecnologia que conecta, soluções que transformam.</p>
+    </footer>
+
+    <script>
+        // --- Core Formatting Utilities ---
+        
+        const wrapLabel = (label) => {
+            const MAX_LENGTH = 16;
+            if (label.length <= MAX_LENGTH) return label;
+            
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+            
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 <= MAX_LENGTH) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const globalTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            },
+            backgroundColor: 'rgba(0,0,0,0.9)',
+            titleColor: '#22c55e',
+            bodyColor: '#ffffff',
+            borderColor: 'rgba(34, 197, 94, 0.3)',
+            borderWidth: 1,
+            padding: 12
+        };
+
+        const globalChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            color: '#a3a3a3',
+            plugins: {
+                legend: { labels: { color: '#d4d4d4', font: { family: "'Plus Jakarta Sans', sans-serif" } } },
+                tooltip: globalTooltipConfig
+            },
+            scales: {
+                x: { ticks: { color: '#737373', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                y: { ticks: { color: '#737373', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } }
+            }
+        };
+
+        // --- Chart.js Implementations ---
+
+        // Chart 1: Bar Chart (Sales & Acquisitions)
+        const ctx1 = document.getElementById('chartPath1').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: [wrapLabel('Sem Presença Digital (Físico)'), wrapLabel('Apenas Redes Sociais'), wrapLabel('Website Profissional Institucional'), wrapLabel('E-Commerce Completo SAPOTECH')],
+                datasets: [{
+                    label: 'Volume Relativo de Vendas (%)',
+                    data: [100, 145, 280, 550],
+                    backgroundColor: ['#171717', '#064e3b', '#10b981', '#22c55e'],
+                    borderColor: '#22c55e',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                ...globalChartOptions,
+                plugins: { ...globalChartOptions.plugins, legend: { display: false } }
+            }
+        });
+
+        // Chart 2: Doughnut (Diagnostics & Wisdom)
+        const ctx2 = document.getElementById('chartPath2').getContext('2d');
+        const labels2 = ['Falha Física / Desgaste', 'Infeção por Malware/Vírus', 'Erro Humano & Descuido', 'Sistemas Obsoletos'];
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: labels2.map(wrapLabel),
+                datasets: [{
+                    data: [35, 25, 25, 15],
+                    backgroundColor: ['#171717', '#dc2626', '#eab308', '#10b981'],
+                    borderColor: '#000000',
+                    borderWidth: 2,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                color: '#a3a3a3',
+                plugins: {
+                    legend: { position: 'right', labels: { color: '#d4d4d4', font: { size: 10 } } },
+                    tooltip: globalTooltipConfig
+                },
+                cutout: '70%'
+            }
+        });
+
+        // Chart 3: Bubble (Networking / Cloud)
+        const ctx3 = document.getElementById('chartPath3').getContext('2d');
+        new Chart(ctx3, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Eficiência de Colaboração PME',
+                    data: [
+                        { x: 2, y: 10, r: 5 },   // Físico Pequeno
+                        { x: 5, y: 25, r: 10 },  // Físico Médio
+                        { x: 10, y: 35, r: 8 },  // Físico Limitado
+                        { x: 3, y: 40, r: 15 },  // Cloud Startup
+                        { x: 8, y: 70, r: 25 },  // Cloud PME
+                        { x: 15, y: 95, r: 35 }  // Cloud Escalonada SAPOTECH
+                    ],
+                    backgroundColor: 'rgba(34, 197, 94, 0.4)',
+                    borderColor: '#22c55e',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...globalChartOptions,
+                scales: {
+                    x: { ...globalChartOptions.scales.x, title: { display: true, text: 'Tamanho da Equipa', color: '#737373' } },
+                    y: { ...globalChartOptions.scales.y, title: { display: true, text: 'Projetos Concluídos (Velocidade)', color: '#737373' } }
+                },
+                plugins: {
+                    ...globalChartOptions.plugins,
+                    tooltip: {
+                        ...globalTooltipConfig,
+                        callbacks: {
+                            label: function(context) {
+                                return `Equipa: ${context.raw.x} | Saída: ${context.raw.y} | Dados Cloud: ${context.raw.r}TB`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Line (Entrepreneurship & Growth)
+        const ctx4 = document.getElementById('chartPath4').getContext('2d');
+        new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: ['Ano 1', 'Ano 2', 'Ano 3', 'Ano 4', 'Ano 5'],
+                datasets: [
+                    {
+                        label: 'PME com Infraestrutura SAPOTECH',
+                        data: [100, 180, 320, 600, 1100],
+                        borderColor: '#22c55e',
+                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: '#22c55e',
+                        pointRadius: 5
+                    },
+                    {
+                        label: 'PME Tradicional (Inércia)',
+                        data: [100, 110, 115, 105, 120],
+                        borderColor: '#525252',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        borderDash: [5, 5],
+                        pointBackgroundColor: '#525252',
+                        pointRadius: 3
+                    }
+                ]
+            },
+            options: {
+                ...globalChartOptions,
+                interaction: { mode: 'index', intersect: false }
+            }
+        });
+
+        // Chart 5: Stacked Bar (Investment ROI)
+        const ctx5 = document.getElementById('chartPath5').getContext('2d');
+        const labels5 = ['Cibersegurança Básica', 'Manutenção Preventiva', 'Servidores Cloud', 'Web & E-Commerce'];
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: labels5.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Custo de Implementação Mensal (Relativo)',
+                        data: [10, 15, 25, 40],
+                        backgroundColor: '#171717',
+                        borderColor: '#525252',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Prejuízo Evitado (Ransomware, Falhas)',
+                        data: [150, 120, 200, 0],
+                        backgroundColor: '#064e3b'
+                    },
+                    {
+                        label: 'Nova Receita / Lucro Líquido Gerado',
+                        data: [0, 20, 80, 350],
+                        backgroundColor: '#22c55e'
+                    }
+                ]
+            },
+            options: {
+                ...globalChartOptions,
+                scales: {
+                    x: { stacked: true, ticks: { color: '#737373', font: { size: 10 } }, grid: { display: false } },
+                    y: { stacked: true, ticks: { color: '#737373' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                }
+            }
+        });
+
+        // Chart 6: Area (Data Recovery & Reproduction)
+        const ctx6 = document.getElementById('chartPath6').getContext('2d');
+        new Chart(ctx6, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Mar', 'Mai', 'Jul', 'Set', 'Nov'],
+                datasets: [{
+                    label: 'Volume de Ficheiros Críticos Salvos (TB)',
+                    data: [2, 5, 8, 14, 22, 35],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                    fill: true,
+                    tension: 0.3,
+                    borderWidth: 2
+                }]
+            },
+            options: { ...globalChartOptions }
+        });
+
+        // Chart 7: Radar (Storytelling & Brand)
+        const ctx7 = document.getElementById('chartPath7').getContext('2d');
+        const labels7 = ['Confiança do Cliente', 'Perceção de Inovação', 'Alcance Geográfico', 'Retenção / Fidelidade', 'Volume de Contactos'];
+        new Chart(ctx7, {
+            type: 'radar',
+            data: {
+                labels: labels7.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Marca PME Digitalizada (SAPOTECH)',
+                        data: [95, 90, 100, 85, 95],
+                        backgroundColor: 'rgba(34, 197, 94, 0.4)',
+                        borderColor: '#22c55e',
+                        pointBackgroundColor: '#22c55e',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Marca com Storytelling Fraco',
+                        data: [40, 30, 20, 50, 35],
+                        backgroundColor: 'rgba(82, 82, 82, 0.2)',
+                        borderColor: '#525252',
+                        pointBackgroundColor: '#525252',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                color: '#a3a3a3',
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255,255,255,0.1)' },
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        pointLabels: { color: '#d4d4d4', font: { size: 10 } },
+                        ticks: { display: false, min: 0, max: 100 }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: '#d4d4d4' } },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+
+        // --- Plotly.js Implementation ---
+        // Chart 8: 3D Scatter (INFO, TECH, ACCESS)
+        
+        const generatePlotlyData = () => {
+            let x_info = []; // Dados estruturados
+            let y_tech = []; // Capacidade Tecnologica
+            let z_access = []; // Acessibilidade / Plataforma
+            let c_wealth = []; // Riqueza gerada (Color)
+
+            for (let i = 0; i < 100; i++) {
+                let info = Math.random() * 100;
+                let tech = Math.random() * 100;
+                let access = Math.random() * 100;
+                
+                // Synergistic wealth formula based on the intersection
+                let wealth = (info * 0.3) + (tech * 0.3) + (access * 0.4) + ((info * tech * access) / 20000);
+
+                x_info.push(info);
+                y_tech.push(tech);
+                z_access.push(access);
+                c_wealth.push(wealth);
+            }
+            return { x_info, y_tech, z_access, c_wealth };
+        };
+
+        const pData = generatePlotlyData();
+
+        const trace = {
+            x: pData.x_info,
+            y: pData.y_tech,
+            z: pData.z_access,
+            mode: 'markers',
+            marker: {
+                size: 6,
+                color: pData.c_wealth,
+                colorscale: [
+                    [0, '#171717'],
+                    [0.5, '#065f46'],
+                    [1, '#22c55e']
+                ],
+                opacity: 0.8,
+                showscale: true,
+                colorbar: {
+                    title: 'Riqueza',
+                    titleside: 'right',
+                    tickfont: { color: '#a3a3a3' },
+                    titlefont: { color: '#a3a3a3' }
+                }
+            },
+            type: 'scatter3d',
+            hovertemplate: 'INFO: %{x:.1f}<br>TECH: %{y:.1f}<br>ACCESS: %{z:.1f}<br>Multiplicação: %{marker.color:.1f}<extra></extra>'
+        };
+
+        const layout = {
+            autosize: true,
+            margin: { l: 0, r: 0, b: 0, t: 0 },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            scene: {
+                xaxis: { title: 'INFO (Dados)', backgroundcolor: "rgba(0,0,0,0)", gridcolor: "#333", showbackground: false, zerolinecolor: "#22c55e", tickfont: {color: "#737373"}, titlefont: {color: "#22c55e"} },
+                yaxis: { title: 'TECH (Sistemas)', backgroundcolor: "rgba(0,0,0,0)", gridcolor: "#333", showbackground: false, zerolinecolor: "#22c55e", tickfont: {color: "#737373"}, titlefont: {color: "#22c55e"} },
+                zaxis: { title: 'ACCESS (Nuvem/Web)', backgroundcolor: "rgba(0,0,0,0)", gridcolor: "#333", showbackground: false, zerolinecolor: "#22c55e", tickfont: {color: "#737373"}, titlefont: {color: "#22c55e"} },
+                camera: { eye: { x: 1.5, y: 1.5, z: 1.2 } }
+            }
+        };
+
+        Plotly.newPlot('chartPath8', [trace], layout, {responsive: true, displayModeBar: false});
+
+    </script>
+</body>
+</html>
